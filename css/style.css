@@ -111,10 +111,10 @@
 
 	#buy_button {
     color: #000000;
-    font-size: 15px;
-    padding: 5px 10%;
+    font-size: 10px;
+    padding: 3px 7%;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     font-weight: bold;
     background: #fdd051;
     border-radius: 5px;
@@ -159,8 +159,8 @@ body {
     background-color: #0d0000; /* Light background for items */
     border: 1px solid #fdd051; /* Border around items */
     border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Padding inside items */
-    margin: 10px; /* Margin between items */
+    padding: 15px; /* Padding inside items */
+    margin: 5px; /* Margin between items */
     width: calc(50% - 20px); /* Two columns with space for margin */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center text */
@@ -170,8 +170,8 @@ body {
     background-color: #0d0000; /* Light background for items */
     border: 1px solid #fdd051; /* Border around items */
     border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Padding inside items */
-    margin: 10px; /* Margin between items */
+    padding: 15px; /* Padding inside items */
+    margin: 15px; /* Margin between items */
     width: calc(12.5% - 20px); /* Eight columns with space for margin */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center text */
@@ -186,9 +186,10 @@ body {
     margin-top: 40px; /* Remove default margin */
 }
 .product-item img {
-    max-width: 100%; /* Responsive image */
+    max-width: 110%; /* Responsive image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Rounded corners for images */
+	width: 100%;
 }
 
 .price {
