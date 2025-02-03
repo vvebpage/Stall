@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Description" content="តារាងតំលៃអីវ៉ាន់នៅតូបកាកា"/>
+		<link rel="icon" href="images/index/favicon.png">
+		<title>KAKA Stall</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"  crossorigin="anonymous">
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/jquery.js"></script>
+
+	</head>
+
+	<body>
+		<div id="raindrop-container"></div>
+		<!-- existing content -->
+	<div id="app">
+		<div id="header">
+			<div class="hBox clearfix">
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/index/logo.png" alt="">
+					</a>
+				</div>
+				<div class="hIm02">
+					<a :href="kefuUrl" target="_blank">
+						<img src="images/index/h_img02.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+
+<div id="container">
+	<div class="search-bar">
+		<input type="text" id="search-input" placeholder="ស្វែងរកអីវ៉ាន់...">
+		<button id="search-button" onclick="searchProducts()">ស្វែងរក</button>
+	</div>
+    <div class="wrap clearfix">
+        <ul class="product-list" id="product-list">
+			<!-- Products will be dynamically added here -->
+        </ul>
+    </div>
+</div>
+
+<div id="container2">
+	<div class="search-bar">
+		<input type="text" id="search-input" placeholder="ស្វែងរកអីវ៉ាន់...">
+		<button id="search-button" onclick="searchProducts()">ស្វែងរក</button>
+	</div>
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="images/banner/5.jpg" class="carousel-image">
+			</div>
+			<div class="carousel-item">
+				<img src="images/banner/4.jpg" class="carousel-image">
+			</div>
+			<div class="carousel-item">
+				<img src="images/banner/3.jpg" class="carousel-image">
+			</div>
+			<div class="carousel-item">
+				<img src="images/banner/2.jpg" class="carousel-image">
+			</div>
+			<div class="carousel-item">
+				<img src="images/banner/1.jpg" class="carousel-image">
+			</div>
+		</div>
+	</div>
+	<marquee class="scrolling-text">
+		នេះគ្រាន់តែកាតាឡុករូបភាពនិងតំលៃតែប៉ុណ្ណោះ រាល់ការបញ្ជារទិញត្រូវតែទាក់ទងតាម លេខទូរស័ព្ទ ឬ <span class="highlight">Telegram</span> និង <span class="highlight">Facebook</span> របស់យើងតែប៉ុណ្ណោះ។
+	</marquee>
+	<div id="main">
+		<div class="wrap clearfix">
+			<div id="conts">
+				<h2><img src="images/index/maincover.png" alt=""></h2>
+				<ul class="product-list" id="product-list2">
+
+					<!-- added New here 👇 -->
+
+				<!-- <li class="product-item new" data-index="1">
+						<div class="image-container">
+							👉 (Link Image) <img src="https://picsum.photos/200/300?random=1" alt="Product Image">
+		Example:			👉 (none or block) <span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						👉 (Price Riel:..)<span class="price">Price: Riel 12,000</span>
+						👉 (Name)<span class="details">Elegant Pearl Necklace</span>
+						👉 <a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>-->
+
+					<li class="product-item new" data-index="1">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=1" alt="Product Image">
+							<span class="new-label" style="display: true;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 12,000</span>
+						<span class="details">Elegant Pearl Necklace</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="2">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=2" alt="Product Image">
+							<span class="new-label" style="display: true;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 8,500</span>
+						<span class="details">Gold-Plated Hoop Earrings</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="3">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=3" alt="Product Image">
+							<span class="new-label" style="display: true;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 15,000</span>
+						<span class="details">Silver Bracelet with Charms</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="4">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=4" alt="Product Image">
+							<span class="new-label" style="display: true;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 10,000</span>
+						<span class="details">Rose Gold Anklet</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="5">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=5" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 9,000</span>
+						<span class="details">Diamond Stud Earrings</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="6">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=6" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 7,500</span>
+						<span class="details">Leather Wrap Bracelet</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="7">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=7" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 11,000</span>
+						<span class="details">Crystal Pendant Necklace</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="8">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=8" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 13,500</span>
+						<span class="details">Sterling Silver Ring</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="9">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=9" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 6,000</span>
+						<span class="details">Fashionable Hair Clips</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="10">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=10" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 14,000</span>
+						<span class="details">Chic Gold Chain Bracelet</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="11">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=11" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 5,500</span>
+						<span class="details">Colorful Beaded Necklace</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="12">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=12" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 16,000</span>
+						<span class="details">Luxury Pearl Earrings</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="13">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=13" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 9,500</span>
+						<span class="details">Elegant Silver Pendant</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="14">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=14" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 12,500</span>
+						<span class="details">Gold-Plated Bangle</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="15">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=15" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 7,000</span>
+						<span class="details">Trendy Leather Choker</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="16">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=16" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 10,500</span>
+						<span class="details">Rose Gold Necklace</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="17">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=17" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 8,000</span>
+						<span class="details">Silver Hoop Earrings</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="18">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=18" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 11,500</span>
+						<span class="details">Diamond Pendant Necklace</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="19">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=19" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 13,000</span>
+						<span class="details">Gold-Plated Ring</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+					<li class="product-item new" data-index="20">
+						<div class="image-container">
+							<img src="https://picsum.photos/200/300?random=20" alt="Product Image">
+							<span class="new-label" style="display: none;">ស្តុកថ្មី</span>
+						</div>
+						<span class="price">Price: Riel 6,500</span>
+						<span class="details">Fashionable Hair Band</span>
+						<a id="buy_button" target="_blank" href="https://t.me/tinhnow_bot">Buy Now</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="images/banner/5.jpg" class="carousel-image">
+			</div>
+			<div class="carousel-item">
+				<img src="images/banner/4.jpg" class="carousel-image">
+			</div>
+			<div class="carousel-item">
+				<img src="images/banner/3.jpg" class="carousel-image">
+			</div>
+			<div class="carousel-item">
+				<img src="images/banner/2.jpg" class="carousel-image">
+			</div>
+			<div class="carousel-item">
+				<img src="images/banner/1.jpg" class="carousel-image">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="socials"></div>
+						</div>
+						<div class="refresh pcbdmap">
+							<a @click="refresh">Refresh Page</a>
+						</div>
+					<div class="apps">
+						<div class="app-bg">
+								<a href="https://t.me/tinhnow_bot"><img src="images\index\footer.png" alt="Background"></a>
+								<div class="app-img">
+									<a href="https://1.1.1.1" target="_blank"><img src="images/index/btn.png" alt="Button"></a>
+									<a @click="down"><img src="images\index\ft01.png" alt="Layer 3"></a>
+								<div class="app-button">
+									<a href="https://t.me/tinhnow_bot"><img src="images/index/Telegram.png" alt="Telegram	"></a>
+									<a href="www.fb.com/kaka.ladi"><img src="images/index/facebook.png" alt="iOS"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="fBox">
+				<div class="fImg">
+				</div>
+				<p>Copyright © តូបកាកា</p>
+			</div>
+		</div>
+	</div>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+		
+	</body>
+</html>
