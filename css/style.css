@@ -468,11 +468,14 @@ ul li {
 
 .apps {
 	display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin: 145px 0 0 0;
-    width: 109%;
-    transform: translate(-5%, -10%);
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin: 145px 0 0 0;
+	width: 100%;
+	z-index: 1000;
+	transform: translate(-5%, -10%);
+	position: fixed;
+	bottom: 0;
 }
 
 .app-bg {
