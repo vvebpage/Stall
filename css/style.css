@@ -44,43 +44,8 @@
 	justify-content: space-between;
 
 }
-#container .search-bar {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	margin-top: 90px;
-	
-}
 
-#container .search-input {
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 75%;
-}
 
-/* Media query for smartphones */
-@media (max-width: 768px) {
-    #container .search-input {
-        width: 90%;
-        font-size: 14px;
-    }
-
-    #container .search-bar {
-        flex-direction: column;
-    }
-}
-
-/* Media query for larger screens */
-@media (min-width: 769px) {
-    #container .search-input {
-        width: 50%;
-        font-size: 16px;
-    }
-}
-/* ...existing code... */
 
 
 .scrolling-text {
@@ -212,7 +177,14 @@ body {
     text-align: center; /* Center text */
 	color: #fdd051;
 }
-
+#container .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: left; /* Space between columns */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin-top: 40px; /* Remove default margin */
+}
 .product-item img {
     max-width: 100%; /* Responsive image */
     height: auto; /* Maintain aspect ratio */
