@@ -71,9 +71,18 @@
 
 .scrolling-text {
     color: rgb(255, 209, 70);
-    font-size: 14px;
+    font-size: 20px;
 	font-family: 'Khmer OS', sans-serif;
-    margin: 0;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	background-color: #000;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	margin: 0;
+	text-transform: uppercase;
+	animation: marquee 10s linear infinite;
 }
 
 .highlight {
@@ -182,8 +191,8 @@ body {
     border: 1px solid #fdd051; /* Border around items */
     border-radius: 5px; /* Rounded corners */
     padding: 5px; /* Padding inside items */
-    margin: 2px; /* Margin between items */
-    width: calc(54% - 20px); /* Two columns with space for margin */
+    margin: 5px; /* Margin between items */
+    width: calc(52% - 20px); /* Two columns with space for margin */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center text */
 	color: #fdd051;
@@ -374,6 +383,7 @@ ul li {
 	background-size: cover, cover, cover;
 	background-position: center, center, center;
 	height: auto;
+	margin-top: 7px;
 }
 
 #main #conts {
@@ -621,9 +631,8 @@ ul li {
 }
 
 #footer {
-	display: flex;
+    display: flex;
     text-align: center;
-    clear: both;
     background-color: #171717;
     border-top: 1px solid #1b191a;
     bottom: 0;
@@ -632,7 +641,11 @@ ul li {
     align-content: center;
     justify-content: center;
     align-items: baseline;
-	
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 
