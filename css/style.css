@@ -1,32 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Add custom styles here */
-.product-item { margin: 10px; }
-.image-container { position: relative; }
-.new-label { position: absolute; top: 10px; left: 10px; background: yellow; }
-.carousel-image { width: 100%; height: auto; }
-.scrolling-text { background: #f0f0f0; padding: 10px; }
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
-  }
 
-  .close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close-button:hover,
-  .close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
 
 .product-item .image-container {
     position: relative;
@@ -187,7 +162,7 @@ body {
 	list-style-type: none; /* Remove default list styling */
 	padding: 0; /* Remove default padding */
 	margin: 0; /* Remove default margin */
-	margin-bottom: 45px;
+	margin-bottom: 5px;
 }
 
 .product-item {
@@ -225,6 +200,7 @@ body {
 	list-style-type: none; /* Remove default list styling */
 	padding: 0; /* Remove default padding */
 	margin-top: 40px; /* Remove default margin */
+	margin-bottom: 45px;
 }
 .product-item img {
 	width: 100%; /* Make image fill the box */
