@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Add custom styles here */
-
-
+.goTop {
+	display: none;
+	position: fixed;
+	bottom: 164px;
+	right: 20px;
+	background-size: 90px 90px;
+	cursor: pointer;
+	width: 90px;
+	height: 90px;
+	background: url("../images/index/c_22.png") no-repeat;
+	background-position: center;
+}
 .product-item .image-container {
     position: relative;
     display: inline-block;
@@ -12,13 +22,18 @@
     position: absolute;
     top: 2px;
     left: 2px;
-    background-color: #ff0000;
+    background-color: #fdd051;
     background-size: cover;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
     padding: 10px;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     border-radius: 5px;
+}
+
+.strikethrough-price {
+    font-size: 10px; /* Adjust as needed */
+    text-decoration: line-through; /* Optional: to show strikethrough */
 }
 .search-bar {
     margin-bottom: 3px;
