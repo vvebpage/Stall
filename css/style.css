@@ -28,15 +28,15 @@
 }
 .search-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 45px; /* This may not be necessary with position: fixed */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    margin-top: 50px; /* Adjust margin as needed */
     position: fixed; /* Keeps the search bar fixed at the top */
     top: 0; /* Ensures it stays at the top of the viewport */
-    left: 0; /* Aligns it to the left */
-    width: 100%; /* Full width */
+    left: 50%; /* Aligns it to the center */
+    transform: translateX(-50%); /* Centers the element by shifting it left by half its width */
+    width: 50%; /* Adjust width to make it smaller */
     z-index: 1000; /* Ensures it stays above other elements */
-
 }
 
 #search-input {
@@ -44,7 +44,7 @@
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 75%;
+    width: 70%; /* Adjust width as needed */
 }
 
 #search-button {
@@ -54,7 +54,6 @@
     background: #fdd051;
     border: 1px solid #ccc;
     border-radius: 5px;
-    justify-content: space-between;
 }
 
 .highlight {
@@ -286,6 +285,7 @@ body {
 
 #footer {
 	margin-top: auto;
+	border-radius: 5px;
 }
 
 ul li {
@@ -950,12 +950,12 @@ ul li {
 	}
 
 	#footer {
-		bottom: 0;
+		bottom: 0px;
 	}
 
 	#footer p {
 		font-size: 16px;
-		margin-bottom: 3px;
+		margin-bottom: 0px;
 	}
 }
 
