@@ -28,8 +28,14 @@ function searchProducts() {
     const productItems = document.querySelectorAll('.product-item');
 
     productItems.forEach(item => {
-        const details = item.querySelector('.details').textContent.toLowerCase();
-        if (details.includes(input)) {
+        // Get text content from the specified classes
+        const newLabel = item.querySelector('.new-label') ? item.querySelector('.new-label').textContent.toLowerCase() : '';
+        const strikethroughPrice = item.querySelector('.strikethrough-price') ? item.querySelector('.strikethrough-price').textContent.toLowerCase() : '';
+        const productCode = item.querySelector('.Product-code') ? item.querySelector('.Product-code').textContent.toLowerCase() : '';
+        const details = item.querySelector('.details') ? item.querySelector('.details').textContent.toLowerCase() : '';
+
+        // Check if the input matches any of the relevant text
+        if (newLabel.includes(input) || strikethroughPrice.includes(input) || productCode.includes(input) || details.includes(input)) {
             item.style.display = '';
         } else {
             item.style.display = 'none';
