@@ -1,18 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Add custom styles here */
-.goTop {
-	display: none;
-	position: fixed;
-	bottom: 164px;
-	right: 20px;
-	background-size: 90px 90px;
-	cursor: pointer;
-	width: 90px;
-	height: 90px;
-	background: url("../images/index/c_22.png") no-repeat;
-	background-position: center;
-}
+
+
+
 .product-item .image-container {
     position: relative;
     display: inline-block;
@@ -26,41 +17,46 @@
     background-size: cover;
     color: rgb(255, 0, 0);
     padding: 10px;
-    font-size: 15px;
+    font-size: 10px;
     font-weight: bold;
     border-radius: 5px;
 }
 
 .strikethrough-price {
-    font-size: 10px; /* Adjust as needed */
+    font-size: 7px; /* Adjust as needed */
     text-decoration: line-through; /* Optional: to show strikethrough */
 }
 .search-bar {
-    margin-bottom: 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-	margin-top: 50px;
+    margin-top: 45px; /* This may not be necessary with position: fixed */
+    position: fixed; /* Keeps the search bar fixed at the top */
+    top: 0; /* Ensures it stays at the top of the viewport */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it stays above other elements */
 
 }
+
 #search-input {
     padding: 5px;
     font-size: 14px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	width: 75%;
-
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 75%;
 }
+
 #search-button {
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
-	background: #fdd051;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	justify-content: space-between;
-
+    background: #fdd051;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    justify-content: space-between;
 }
+
 .highlight {
     color: red; /* Make the text red */
 }
