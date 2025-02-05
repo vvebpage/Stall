@@ -3,23 +3,6 @@
  * (c) 2014-2022 Evan You
  * Released under the MIT License.
  */
- // Get the button
- const goTopBtn = document.getElementById("goTopBtn");
-
- // Show the button when the user scrolls down 20px from the top of the document
- window.onscroll = function() {
-     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-         goTopBtn.style.display = "block";
-     } else {
-         goTopBtn.style.display = "none";
-     }
- };
-
- // When the user clicks on the button, scroll to the top of the document
- goTopBtn.onclick = function() {
-     document.body.scrollTop = 0; // For Safari
-     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
- };
 
 document.addEventListener('DOMContentLoaded', function() {
     const newLabel = document.querySelector('.new-label');
