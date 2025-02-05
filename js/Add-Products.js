@@ -18,7 +18,7 @@ const addProduct = (newLabel, strikethroughPrice, productCode, details, buttonLi
 };
 
 // Example usage with separate strikethrough price
-addProduct('R12,000', '$3.60', '0001', 'Test Products', 'https://t.me/tinhnow_bot', 'https://kakaladi-catalog.github.io/Stall/images/Products/1.jpeg');
+addProduct('R12,000', '$3.60', '0001', 'Test Products', 'https://t.me/tinhnow_bot', 'https://kakaladi-catalog.github.io/Stall/images/Products/1.jpg');
 addProduct('R20,000', '$5.60', '0002', 'Mini flower Necklace', 'https://t.me/tinhnow_bot', 'https://kakaladi-catalog.github.io/Stall/images/Products/2.jpg');
 addProduct('R30,000', '$7.60', '0003', 'Mini pen Necklace', 'https://t.me/tinhnow_bot', 'https://kakaladi-catalog.github.io/Stall/images/Products/3.jpg');
 addProduct('R40,000', '$9.60', '0004', 'Mini ring Necklace', 'https://t.me/tinhnow_bot', 'https://kakaladi-catalog.github.io/Stall/images/Products/4.jpg');
