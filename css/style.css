@@ -207,6 +207,7 @@ body {
 	height: 100%; /* Make image fill the box */
 	object-fit: cover; /* Ensure the image covers the entire box */
 	border-radius: 5px; /* Rounded corners for images */
+	border: 1px solid #ff0000; /* Border around images */
 }
 
 .price {
@@ -723,7 +724,7 @@ ul li {
 	#header .hBox,
 	#header .hInner,
 	#footer .fBox {
-		max-width: 100%;
+	max-width: 100%;
 	}
 }
 
@@ -899,6 +900,7 @@ ul li {
 
 	#footer p {
 		font-size: 16px;
+		margin-bottom: 3px;
 	}
 }
 
