@@ -100,7 +100,7 @@
     height: 30px; /* Set a fixed height for the container */
     line-height: 30px; /* Match line-height to the container height */
     text-align: center; /* Center text horizontally */
-	margin-top: 90px;
+	margin-top: 30px;
 }
 
 .scrolling-text2 p {
