@@ -1,3 +1,25 @@
+// script.js
+window.onload = function() {
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('closePopup');
+
+    // Show the popup
+    popup.style.display = 'flex';
+
+    // Close the popup when the button is clicked
+    closePopup.onclick = function() {
+        popup.style.display = 'none';
+    };
+
+    // Automatically close the popup after 3 seconds (3000 milliseconds)
+    setTimeout(function() {
+        popup.style.display = 'none';
+    }, 3000);
+};
+
+
+
+
 const addProduct = (newLabel, strikethroughPrice, productCode, details, buttonLink, imageSrc) => {
     const productList = document.getElementById('product-list2');
     const newProduct = document.createElement('li');
