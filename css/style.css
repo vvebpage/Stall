@@ -221,7 +221,7 @@ body {
 }
 
 .product-item {
-    background-color: #0d0000; /* Light background for items */
+	background-color: rgba(13, 0, 0, 0.8); /* Make background transparent */
     border: 1px solid #fdd051; /* Border around items */
     border-radius: 5px; /* Rounded corners */
     padding: 5px; /* Padding inside items */
@@ -229,7 +229,7 @@ body {
     width: calc(52% - 20px); /* Two columns with space for margin */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center text */
-	color: #fdd051;
+    color: #fdd051; /* Text color */
 }
 #container .product-item {
 	background-color: #0d0000; /* Light background for items */
@@ -407,19 +407,35 @@ ul li {
 }
 
 #main {
-	padding: 23px 4px 0 10px;
-	width: 1300px;
-	margin: 0 auto 10px;
-	position: relative;
-	border: 1px solid #fdd051;
-	background-image: url(../images/index/12.png), 
-					  url(../images/index/13.png), 
-					  url(../images/index/14.png);
-	background-attachment: fixed, fixed, fixed;
-	background-size: cover, cover, cover;
-	background-position: center, center, center;
-	height: auto;
-	margin-top: 7px;
+    padding: 23px 4px 0 10px; /* Padding around the content */
+    width: 1300px; /* Fixed width */
+    margin: 0 auto 10px; /* Center the container */
+    position: relative; /* Positioning context for child elements */
+    border: 1px solid #fdd051; /* Border around the container */
+    background-image: url(../images/index/12.png), 
+                      url(../images/index/13.png), 
+                      url(../images/index/14.png); /* Multiple background images */
+    background-attachment: fixed; /* Fixed attachment for parallax effect */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background images */
+    height: auto; /* Height will adjust based on content */
+    margin-top: 7px; /* Top margin */
+    overflow: hidden; /* Prevent overflow of child elements */
+    color: #fdd051; /* Text color */
+    text-align: center; /* Center text */
+    z-index: 1; /* Ensure the main content is above the background */
+}
+
+/* Optional: Add a content overlay for better readability */
+#main::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text visibility */
+    z-index: 0; /* Place it below the content */
 }
 
 #main #conts {
@@ -670,7 +686,7 @@ ul li {
 #footer {
     display: flex;
     text-align: center;
-    background-color: #171717;
+    background-color: rgba(13, 0, 0, 0.8);
     border-top: 1px solid #1b191a;
     bottom: 0;
     flex-direction: row;
