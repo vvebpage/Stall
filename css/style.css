@@ -13,18 +13,23 @@
     position: absolute;
     top: 2px;
     left: 2px;
-    background-color: rgba(255, 208, 0, 0.3); 
+    background-color: rgba(0, 0, 0, 0.5); 
     background-size: cover;
     color: rgb(255, 0, 0);
     padding: 10px;
     font-size: 15px;
     font-weight: bold;
     border-radius: 5px;
+    text-shadow: 1px 1px 0px rgb(255, 255, 255), 
+                 -1px -1px 0px rgb(255, 255, 255),
+                 1px -1px 0px rgb(255, 255, 255),
+                 -1px 1px 0px rgb(255, 255, 255); /* Creates a black outline effect */
 }
 
 .strikethrough-price {
     font-size: 12px; /* Adjust as needed */
     text-decoration: line-through; /* Optional: to show strikethrough */
+	color: #ff0000;
 }
 .search-bar {
     display: flex;
@@ -121,6 +126,10 @@
 
 .highlight {
     color: red;
+	text-shadow: 1px 1px 0px rgb(255, 255, 255),
+				 -1px -1px 0px rgb(255, 255, 255),
+				 1px -1px 0px rgb(255, 255, 255),
+				 -1px 1px 0px rgb(255, 255, 255);
 }
 #raindrop-container {
     position: fixed;
@@ -221,11 +230,11 @@ body {
 }
 
 .product-item {
-	background-color: rgba(13, 0, 0, 0.3); /* Make background transparent */
+	background-color: rgba(13, 0, 0, 0.8); /* Make background transparent */
     border: 1px solid #fdd051; /* Border around items */
     border-radius: 5px; /* Rounded corners */
     padding: 5px; /* Padding inside items */
-    margin: 5px; /* Margin between items */
+    margin: 2px; /* Margin between items */
     width: calc(52% - 20px); /* Two columns with space for margin */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center text */
@@ -265,7 +274,7 @@ body {
     height: 100%; /* Make image fill the box */
     object-fit: cover; /* Ensure the image covers the entire box */
     border-radius: 5px; /* Rounded corners for images */
-    border: 1px solid #ff0000; /* Border around images */
+    border: 1px solid #000000; /* Border around images */
 }
 
 .product-item::after {
@@ -450,7 +459,7 @@ ul li {
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
     bottom: 0; /* Align to the bottom */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text visibility */
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay for better text visibility */
     z-index: 0; /* Place it below the content */
 }
 
@@ -702,7 +711,7 @@ ul li {
 #footer {
     display: flex;
     text-align: center;
-    background-color: rgba(13, 0, 0, 0.4);
+    background-color: rgba(13, 0, 0, 0.8);
     border-top: 1px solid #1b191a;
     bottom: 0;
     flex-direction: row;
@@ -750,9 +759,13 @@ ul li {
 
 #footer p {
 	margin-top: 7px;
-	color: #787878;
+	color: #ffffff;
 	font-size: 12px;
 	line-height: 2.2;
+	text-shadow: 1px 1px 0px rgb(255, 0, 0), 
+                 -1px -1px 0px rgb(255, 0, 0),
+                 1px -1px 0px rgb(255, 0, 0),
+                 -1px 1px 0px rgb(255, 0, 0); /* Creates a black outline effect */
 }
 
 .box-redirect {
