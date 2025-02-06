@@ -13,7 +13,7 @@
     position: absolute;
     top: 2px;
     left: 2px;
-    background-color: rgba(255, 208, 0, 0.6); 
+    background-color: rgba(255, 208, 0, 0.3); 
     background-size: cover;
     color: rgb(255, 0, 0);
     padding: 10px;
@@ -23,7 +23,7 @@
 }
 
 .strikethrough-price {
-    font-size: 10px; /* Adjust as needed */
+    font-size: 12px; /* Adjust as needed */
     text-decoration: line-through; /* Optional: to show strikethrough */
 }
 .search-bar {
@@ -221,7 +221,7 @@ body {
 }
 
 .product-item {
-	background-color: rgba(13, 0, 0, 0.8); /* Make background transparent */
+	background-color: rgba(13, 0, 0, 0.3); /* Make background transparent */
     border: 1px solid #fdd051; /* Border around items */
     border-radius: 5px; /* Rounded corners */
     padding: 5px; /* Padding inside items */
@@ -256,12 +256,28 @@ body {
 	padding: 0; /* Remove default padding */
 	margin-bottom: 45px;
 }
+.product-item {
+    position: relative; /* Positioning context for the pseudo-element */
+}
+
 .product-item img {
-	width: 100%; /* Make image fill the box */
-	height: 100%; /* Make image fill the box */
-	object-fit: cover; /* Ensure the image covers the entire box */
-	border-radius: 5px; /* Rounded corners for images */
-	border: 1px solid #ff0000; /* Border around images */
+    width: 100%; /* Make image fill the box */
+    height: 100%; /* Make image fill the box */
+    object-fit: cover; /* Ensure the image covers the entire box */
+    border-radius: 5px; /* Rounded corners for images */
+    border: 1px solid #ff0000; /* Border around images */
+}
+
+.product-item::after {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it over the image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* White overlay with 50% opacity */
+    border-radius: 5px; /* Match the border radius */
+    pointer-events: none; /* Allow clicks to pass through */
 }
 
 .price {
@@ -686,7 +702,7 @@ ul li {
 #footer {
     display: flex;
     text-align: center;
-    background-color: rgba(13, 0, 0, 0.8);
+    background-color: rgba(13, 0, 0, 0.4);
     border-top: 1px solid #1b191a;
     bottom: 0;
     flex-direction: row;
