@@ -9,14 +9,13 @@ const addProduct = (newLabel, strikethroughPrice, productCode, details, buttonLi
             <img src="${imageSrc}" alt="Product Image">
             <span class="new-label">${newLabel} <del class="strikethrough-price">${strikethroughPrice}</del></span>
         </div>
-        <span class="Product-code">លេខកូដ: ${productCode}</span>
+        <span class="Product-code">លេខកូដ: <span class="highlight"> ${productCode}</span></span>
         <span class="details">${details}</span>
         <a id="buy_button" target="_blank" href="${buttonLink}">Buy Now</a>
     `;
 
     productList.appendChild(newProduct);
 };
-
 // Example usage with separate strikethrough price
 addProduct('R12,000', '$3.60', '0001', 'Test Products', 'https://t.me/tinhnow_bot', 'https://kakaladi-catalog.github.io/Stall/images/Products/1.jpg');
 addProduct('R20,000', '$5.60', '0002', 'Mini flower Necklace', 'https://t.me/tinhnow_bot', 'https://kakaladi-catalog.github.io/Stall/images/Products/2.jpg');
