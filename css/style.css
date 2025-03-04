@@ -462,9 +462,9 @@ ul li {
     margin: 0 auto 10px; /* Center the container */
     position: relative; /* Positioning context for child elements */
     border: 1px solid #fdd051; /* Border around the container */
-    background-image: url(../images/index/12.png), 
+    /* background-image: url(../images/index/12.png), 
                       url(../images/index/13.png), 
-                      url(../images/index/14.png); /* Multiple background images */
+                      url(../images/index/14.png); Multiple background images */
     background-attachment: fixed; /* Fixed attachment for parallax effect */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background images */
